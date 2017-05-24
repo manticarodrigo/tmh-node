@@ -11,13 +11,13 @@ const app = express();
 app.use(cors()); // CORS (Cross-Origin Resource Sharing) headers to support Cross-site HTTP requests
 
 app.use(function(req, res, next) {
-   res.header("Access-Control-Allow-Origin", "stage.themanhome.com, themanhome.herokuapp.com");
+   res.header("Access-Control-Allow-Origin", "*");
    res.header('Access-Control-Allow-Methods', 'DELETE, PUT');
    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
    next();
 });
 
-app.use(express.static('/www'));
+app.use(express.static('/www/'));
 
 app.use(bodyParser.urlencoded({
     extended: true
