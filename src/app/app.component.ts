@@ -10,7 +10,7 @@ import { ImageService } from './images/image.service';
 })
 export class AppComponent {
   title = 'Angular Router';
-  constructor(private userService: UserService,
+  constructor(public userService: UserService,
               private imageService: ImageService) {
     this.userService.login('manticarodrigo@gmail.com', 'xlemrotm34711', function(user) {
       console.log("logged in with user:");
