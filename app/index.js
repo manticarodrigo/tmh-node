@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
    next();
 });
 
-app.use(express.static('www'));
+app.use(express.static('/www'));
 
 app.use(bodyParser.urlencoded({
     extended: true
